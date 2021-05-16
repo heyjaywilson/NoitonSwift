@@ -11,10 +11,10 @@
 		1510CBD12651A0E4005B0DCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBD02651A0E4005B0DCC /* ContentView.swift */; };
 		1510CBD32651A0E5005B0DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1510CBD22651A0E5005B0DCC /* Assets.xcassets */; };
 		1510CBD62651A0E5005B0DCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1510CBD52651A0E5005B0DCC /* Preview Assets.xcassets */; };
-		1510CBDF2651A104005B0DCC /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBDE2651A104005B0DCC /* secrets.swift */; };
 		1510CBE22651A241005B0DCC /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE12651A241005B0DCC /* URLSession+Extension.swift */; };
 		1510CBE42651A290005B0DCC /* NotionAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE32651A290005B0DCC /* NotionAPIService.swift */; };
 		1510CBE62651AA60005B0DCC /* NotionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE52651AA60005B0DCC /* NotionModels.swift */; };
+		1567F7DB2651C0690008F878 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567F7DA2651C0690008F878 /* secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +25,10 @@
 		1510CBD52651A0E5005B0DCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1510CBD72651A0E5005B0DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1510CBD82651A0E5005B0DCC /* notionintegration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notionintegration.entitlements; sourceTree = "<group>"; };
-		1510CBDE2651A104005B0DCC /* secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
 		1510CBE12651A241005B0DCC /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		1510CBE32651A290005B0DCC /* NotionAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionAPIService.swift; sourceTree = "<group>"; };
 		1510CBE52651AA60005B0DCC /* NotionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionModels.swift; sourceTree = "<group>"; };
+		1567F7DA2651C0690008F878 /* secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				1510CBD72651A0E5005B0DCC /* Info.plist */,
 				1510CBD82651A0E5005B0DCC /* notionintegration.entitlements */,
 				1510CBD42651A0E5005B0DCC /* Preview Content */,
-				1510CBDE2651A104005B0DCC /* secrets.swift */,
+				1567F7DA2651C0690008F878 /* secrets.swift */,
 				1510CBE52651AA60005B0DCC /* NotionModels.swift */,
 			);
 			path = notionintegration;
@@ -165,7 +165,7 @@
 				1510CBD12651A0E4005B0DCC /* ContentView.swift in Sources */,
 				1510CBCF2651A0E4005B0DCC /* notionintegrationApp.swift in Sources */,
 				1510CBE42651A290005B0DCC /* NotionAPIService.swift in Sources */,
-				1510CBDF2651A104005B0DCC /* secrets.swift in Sources */,
+				1567F7DB2651C0690008F878 /* secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
