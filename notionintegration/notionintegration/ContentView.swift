@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    let notionAPI = NotionAPIService.shared
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("ADD DB"){
+            notionAPI.add(info: testPage, to: .pages) { (result: Result<NotionDB, NotionAPIService.NotionAPIServiceError>) in
+                switch result {
+                case.success(let results):
+                    print(results)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }.padding()
     }
 }
 

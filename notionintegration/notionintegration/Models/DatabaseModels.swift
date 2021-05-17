@@ -51,3 +51,33 @@ struct AnnotationObject: Codable {
     var code: Bool
     var color: String
 }
+
+let testDBRow = NotionDB(
+    id: UUID().uuidString,
+    created: Date().description,
+    lastEdited: Date().description,
+    title: [testTitle],
+    properties: testPropertyObject)
+
+let testTitle = RichTextObject(
+    plainText: "hello",
+    href: nil,
+    annotations: testAnnotationObject,
+    type: "text")
+
+let testAnnotationObject = AnnotationObject(
+    bold: true,
+    italic: false,
+    strikethrough: false,
+    underline: false,
+    code: false,
+    color: "blue")
+
+let testPropertyObject = PropertyObject(
+    id: "fy:{",
+    type: "rich_text")
+
+let testProperties = [
+    "Name": PropertyObject(id: "", type: "title"),
+    "Tags": PropertyObject(id: "", type: "rich_text")
+]
