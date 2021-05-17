@@ -78,6 +78,6 @@ let testPropertyObject = PropertyObject(
     type: "rich_text")
 
 let testProperties = [
-    "Name": PropertyObject(id: "", type: "title"),
-    "Tags": PropertyObject(id: "", type: "rich_text")
+    "Name": PropertyObject(id: "hello", type: "title"),
+    "Tags": PropertyObject(id: "hello", type: "rich_text")
 ]

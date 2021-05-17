@@ -8,7 +8,7 @@
 import Foundation
 
 struct NotionPage: Codable {
-    let object = "page"
+    var object = "page"
     var id: String
     var created_time: String
     var last_edited_time: String

@@ -110,13 +110,16 @@ class NotionAPIService {
         } catch {
             completion(.failure(.encodeError))
         }
+        print(databaseRow)
         
         urlSession.dataTask(with: request){ (result) in
             switch result{
             case .success(let (response, data)):
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
-                    print(response)
-                    print((response as? HTTPURLResponse).debugDescription)
+//                    print(response)
+                    print((response as? HTTPURLResponse)?.statusCode)
+                    let responseData = String(data: data, encoding: String.Encoding.utf8)
+                    print(responseData)
                     completion(.failure(.invalidResponse))
                     return
                 }
