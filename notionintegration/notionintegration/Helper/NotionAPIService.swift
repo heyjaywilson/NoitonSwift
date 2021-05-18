@@ -117,9 +117,9 @@ class NotionAPIService {
             case .success(let (response, data)):
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
 //                    print(response)
-                    print((response as? HTTPURLResponse)?.statusCode)
+                    print((response as? HTTPURLResponse)?.statusCode ?? 0)
                     let responseData = String(data: data, encoding: String.Encoding.utf8)
-                    print(responseData)
+                    print(responseData as Any)
                     completion(.failure(.invalidResponse))
                     return
                 }
