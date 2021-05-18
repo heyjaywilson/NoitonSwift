@@ -85,59 +85,59 @@ class NotionAPIService {
         }.resume()
     }
     
-    private func postResources<T: Decodable>(url: URL, databaseRow: NotionDBPage, completion: @escaping (Result<T, NotionAPIServiceError>) -> Void) {
-        guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
-            completion(.failure(.invalidEndpoint))
-            return
-        }
-        
-        guard let requestURL = urlComponents.url else {
-            completion(.failure(.invalidEndpoint))
-            return
-        }
-        
-        var request = URLRequest(url: requestURL)
-        request.setValue("Bearer \(notionSecret)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("2021-05-13", forHTTPHeaderField: "Notion-Version")
-        request.httpMethod = "POST"
-        
-        let data: Data
-        
-        do {
-            data = try jsonEncoder.encode(databaseRow)
-            request.httpBody = data
-        } catch {
-            completion(.failure(.encodeError))
-        }
-        print(databaseRow)
-        
-        urlSession.dataTask(with: request){ (result) in
-            switch result{
-            case .success(let (response, data)):
-                guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
-//                    print(response)
-                    print((response as? HTTPURLResponse)?.statusCode ?? 0)
-                    let responseData = String(data: data, encoding: String.Encoding.utf8)
-                    print(responseData as Any)
-                    completion(.failure(.invalidResponse))
-                    return
-                }
-                do {
-                    let values = try self.jsonDecoder.decode(T.self, from: data)
-                    completion(.success(values))
-                } catch {
-                    completion(.failure(.decodeError))
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(.apiError))
-            }
-        }.resume()
-    }
-    
-    public func add(info dbRow: NotionDBPage, to endpoint: Endpoint, result: @escaping (Result<NotionDB, NotionAPIServiceError>) -> Void){
-        let url = baseURL.appendingPathComponent(endpoint.rawValue)
-        postResources(url: url, databaseRow: dbRow, completion: result)
-    }
+//    private func postResources<T: Decodable>(url: URL, databaseRow: NotionDBPage, completion: @escaping (Result<T, NotionAPIServiceError>) -> Void) {
+//        guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
+//            completion(.failure(.invalidEndpoint))
+//            return
+//        }
+//        
+//        guard let requestURL = urlComponents.url else {
+//            completion(.failure(.invalidEndpoint))
+//            return
+//        }
+//        
+//        var request = URLRequest(url: requestURL)
+//        request.setValue("Bearer \(notionSecret)", forHTTPHeaderField: "Authorization")
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("2021-05-13", forHTTPHeaderField: "Notion-Version")
+//        request.httpMethod = "POST"
+//        
+//        let data: Data
+//        
+//        do {
+//            data = try jsonEncoder.encode(databaseRow)
+//            request.httpBody = data
+//        } catch {
+//            completion(.failure(.encodeError))
+//        }
+//        print(databaseRow)
+//        
+//        urlSession.dataTask(with: request){ (result) in
+//            switch result{
+//            case .success(let (response, data)):
+//                guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
+////                    print(response)
+//                    print((response as? HTTPURLResponse)?.statusCode ?? 0)
+//                    let responseData = String(data: data, encoding: String.Encoding.utf8)
+//                    print(responseData as Any)
+//                    completion(.failure(.invalidResponse))
+//                    return
+//                }
+//                do {
+//                    let values = try self.jsonDecoder.decode(T.self, from: data)
+//                    completion(.success(values))
+//                } catch {
+//                    completion(.failure(.decodeError))
+//                }
+//            case .failure(let error):
+//                print(error)
+//                completion(.failure(.apiError))
+//            }
+//        }.resume()
+//    }
+//    
+//    public func add(info dbRow: NotionDBPage, to endpoint: Endpoint, result: @escaping (Result<NotionDB, NotionAPIServiceError>) -> Void){
+//        let url = baseURL.appendingPathComponent(endpoint.rawValue)
+//        postResources(url: url, databaseRow: dbRow, completion: result)
+//    }
 }

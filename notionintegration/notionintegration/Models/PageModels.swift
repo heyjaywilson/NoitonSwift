@@ -14,5 +14,5 @@ public struct Page: Decodable, Identifiable {
     public let lastEditedTime: Date
     public let parent: Parent
     public let archived: Bool
-    public let properties: [String : Property]
+    public let properties: [String : String]
 }

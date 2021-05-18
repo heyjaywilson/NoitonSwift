@@ -14,9 +14,11 @@
 		1510CBE22651A241005B0DCC /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE12651A241005B0DCC /* URLSession+Extension.swift */; };
 		1510CBE42651A290005B0DCC /* NotionAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE32651A290005B0DCC /* NotionAPIService.swift */; };
 		1510CBE62651AA60005B0DCC /* DatabaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE52651AA60005B0DCC /* DatabaseModels.swift */; };
+		15186567265418BC00050DCF /* TypedCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15186566265418BC00050DCF /* TypedCodingKey.swift */; };
 		1567F7DB2651C0690008F878 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567F7DA2651C0690008F878 /* secrets.swift */; };
 		1567F7DE2651D6160008F878 /* PageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567F7DD2651D6160008F878 /* PageModels.swift */; };
 		15846DF526535D69006282DD /* ParentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15846DF426535D69006282DD /* ParentModels.swift */; };
+		15C3F4B22653E597004864D0 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3F4B12653E597004864D0 /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +32,11 @@
 		1510CBE12651A241005B0DCC /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		1510CBE32651A290005B0DCC /* NotionAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionAPIService.swift; sourceTree = "<group>"; };
 		1510CBE52651AA60005B0DCC /* DatabaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModels.swift; sourceTree = "<group>"; };
+		15186566265418BC00050DCF /* TypedCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedCodingKey.swift; sourceTree = "<group>"; };
 		1567F7DA2651C0690008F878 /* secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
 		1567F7DD2651D6160008F878 /* PageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModels.swift; sourceTree = "<group>"; };
 		15846DF426535D69006282DD /* ParentModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModels.swift; sourceTree = "<group>"; };
+		15C3F4B12653E597004864D0 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			children = (
 				1510CBE12651A241005B0DCC /* URLSession+Extension.swift */,
 				1510CBE32651A290005B0DCC /* NotionAPIService.swift */,
+				15C3F4B12653E597004864D0 /* TestData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				1510CBE52651AA60005B0DCC /* DatabaseModels.swift */,
 				1567F7DD2651D6160008F878 /* PageModels.swift */,
 				15846DF426535D69006282DD /* ParentModels.swift */,
+				15186566265418BC00050DCF /* TypedCodingKey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,11 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C3F4B22653E597004864D0 /* TestData.swift in Sources */,
 				1567F7DE2651D6160008F878 /* PageModels.swift in Sources */,
 				1510CBE62651AA60005B0DCC /* DatabaseModels.swift in Sources */,
 				1510CBE22651A241005B0DCC /* URLSession+Extension.swift in Sources */,
 				15846DF526535D69006282DD /* ParentModels.swift in Sources */,
 				1510CBD12651A0E4005B0DCC /* ContentView.swift in Sources */,
+				15186567265418BC00050DCF /* TypedCodingKey.swift in Sources */,
 				1510CBCF2651A0E4005B0DCC /* notionintegrationApp.swift in Sources */,
 				1510CBE42651A290005B0DCC /* NotionAPIService.swift in Sources */,
 				1567F7DB2651C0690008F878 /* secrets.swift in Sources */,
