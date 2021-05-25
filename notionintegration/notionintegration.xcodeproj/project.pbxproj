@@ -13,11 +13,11 @@
 		1510CBD62651A0E5005B0DCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1510CBD52651A0E5005B0DCC /* Preview Assets.xcassets */; };
 		1510CBE22651A241005B0DCC /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE12651A241005B0DCC /* URLSession+Extension.swift */; };
 		1510CBE42651A290005B0DCC /* NotionAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE32651A290005B0DCC /* NotionAPIService.swift */; };
-		1510CBE62651AA60005B0DCC /* DatabaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510CBE52651AA60005B0DCC /* DatabaseModels.swift */; };
 		15186567265418BC00050DCF /* TypedCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15186566265418BC00050DCF /* TypedCodingKey.swift */; };
 		1567F7DB2651C0690008F878 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567F7DA2651C0690008F878 /* secrets.swift */; };
-		1567F7DE2651D6160008F878 /* PageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567F7DD2651D6160008F878 /* PageModels.swift */; };
-		15846DF526535D69006282DD /* ParentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15846DF426535D69006282DD /* ParentModels.swift */; };
+		15846DF526535D69006282DD /* ParentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15846DF426535D69006282DD /* ParentModel.swift */; };
+		1598C19326554E19004078AD /* PropertyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598C19226554E19004078AD /* PropertyModel.swift */; };
+		1598C19526554FF8004078AD /* RichTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598C19426554FF8004078AD /* RichTextModel.swift */; };
 		15C3F4B22653E597004864D0 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3F4B12653E597004864D0 /* TestData.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +31,11 @@
 		1510CBD82651A0E5005B0DCC /* notionintegration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notionintegration.entitlements; sourceTree = "<group>"; };
 		1510CBE12651A241005B0DCC /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		1510CBE32651A290005B0DCC /* NotionAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionAPIService.swift; sourceTree = "<group>"; };
-		1510CBE52651AA60005B0DCC /* DatabaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModels.swift; sourceTree = "<group>"; };
 		15186566265418BC00050DCF /* TypedCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedCodingKey.swift; sourceTree = "<group>"; };
 		1567F7DA2651C0690008F878 /* secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
-		1567F7DD2651D6160008F878 /* PageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModels.swift; sourceTree = "<group>"; };
-		15846DF426535D69006282DD /* ParentModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModels.swift; sourceTree = "<group>"; };
+		15846DF426535D69006282DD /* ParentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentModel.swift; sourceTree = "<group>"; };
+		1598C19226554E19004078AD /* PropertyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyModel.swift; sourceTree = "<group>"; };
+		1598C19426554FF8004078AD /* RichTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextModel.swift; sourceTree = "<group>"; };
 		15C3F4B12653E597004864D0 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,10 +103,10 @@
 		1567F7DC2651D56B0008F878 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1510CBE52651AA60005B0DCC /* DatabaseModels.swift */,
-				1567F7DD2651D6160008F878 /* PageModels.swift */,
-				15846DF426535D69006282DD /* ParentModels.swift */,
+				15846DF426535D69006282DD /* ParentModel.swift */,
 				15186566265418BC00050DCF /* TypedCodingKey.swift */,
+				1598C19226554E19004078AD /* PropertyModel.swift */,
+				1598C19426554FF8004078AD /* RichTextModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,14 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C3F4B22653E597004864D0 /* TestData.swift in Sources */,
-				1567F7DE2651D6160008F878 /* PageModels.swift in Sources */,
-				1510CBE62651AA60005B0DCC /* DatabaseModels.swift in Sources */,
 				1510CBE22651A241005B0DCC /* URLSession+Extension.swift in Sources */,
-				15846DF526535D69006282DD /* ParentModels.swift in Sources */,
+				15846DF526535D69006282DD /* ParentModel.swift in Sources */,
 				1510CBD12651A0E4005B0DCC /* ContentView.swift in Sources */,
+				1598C19526554FF8004078AD /* RichTextModel.swift in Sources */,
 				15186567265418BC00050DCF /* TypedCodingKey.swift in Sources */,
 				1510CBCF2651A0E4005B0DCC /* notionintegrationApp.swift in Sources */,
 				1510CBE42651A290005B0DCC /* NotionAPIService.swift in Sources */,
+				1598C19326554E19004078AD /* PropertyModel.swift in Sources */,
 				1567F7DB2651C0690008F878 /* secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
